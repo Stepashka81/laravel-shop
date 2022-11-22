@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'online_shop' => 'Интернет Магазин',
+    'online_shop' => 'Мой магазин',
     'all_products' => 'Все товары',
     'product' => 'Товар',
     'categories' => 'Категории',

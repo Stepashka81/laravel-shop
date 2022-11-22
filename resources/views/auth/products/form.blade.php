@@ -92,7 +92,7 @@
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
                     <div class="col-sm-10">
                         <label class="btn btn-default btn-file">
-                            Загрузить <input type="file" style="display: none;" name="image" id="image">
+                            Загрузить <input type="file" style2="display: none;" name="image" id="image">
                         </label>
                     </div>
                 </div>

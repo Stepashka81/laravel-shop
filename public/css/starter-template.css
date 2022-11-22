@@ -1,6 +1,8 @@
 body {
     padding-top: 40px;
+    background-color: #e5e5e5;
 }
+
 
 .starter-template {
     padding: 20px 15px;
@@ -52,3 +54,40 @@ footer {
     color: #99979c;
     background-color: #2a2730;
 }
+
+/* _____________Мои стили____________________________________*/
+
+.navStyle {
+    background-color: lightgray
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    color: blue;
+    background-color: lightgray;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    background: lightgray;
+}
+
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: lightgray;
+}
+
+
+.brandStyle {
+    color: black;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-style: italic;
+}
+
+.brandStyle:hover {
+    text-decoration: none;
+}
+.allProductsPageHeader{color: red; font-size: xx-large;}

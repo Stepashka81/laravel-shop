@@ -3,7 +3,7 @@
 @section('title', __('main.title'))
 
 @section('content')
-    <h1>@lang('main.all_products')</h1>
+    <h1 class="allProductsPageHeader">@lang('main.all_products')</h1>
     <form method="GET" action="{{route("index")}}">
         <div class="filters row">
             <div class="col-sm-6 col-md-3">
