@@ -23,8 +23,6 @@ Route::get('currency/{currencyCode}', 'MainController@changeCurrency')->name('cu
 Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
 Route::middleware(['set_locale'])->group(function () {
-    Route::get('reset', 'ResetController@reset')->name('reset');
-
     Route::middleware(['auth'])->group(function () {
         Route::group([
             'prefix' => 'person',
