@@ -46,7 +46,11 @@ Route::middleware(['set_locale'])->group(function () {
 
             Route::resource('categories', 'CategoryController');
             Route::resource('products', 'ProductController');
-            Route::resource('products/{product}/skus', 'SkuController');
+            Route::resource('products/{product}/skus', 'SkuController', [
+                'names' => [
+                    'update' => 'skus.update',
+                ]
+            ]);
             Route::resource('properties', 'PropertyController');
             Route::resource('merchants', 'MerchantController');
             Route::get('merchant/{merchant}/update_token', 'MerchantController@updateToken')->name('merchants.update_token');

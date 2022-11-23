@@ -45,8 +45,8 @@ class SkuController extends Controller
     {
         $params = $request->all();
         $params['product_id'] = $request->product->id;
-        $skus = Sku::create($params);
-        $skus->propertyOptions()->sync($request->property_id);
+        $sku = Sku::create($params);
+        $sku->propertyOptions()->sync($request->property_id);
         return redirect()->route('skus.index', $product);
     }
 
@@ -54,24 +54,24 @@ class SkuController extends Controller
      * Display the specified resource.
      *
      * @param  Product  $product
-     * @param  Sku  $skus
+     * @param  Sku  $sku
      * @return void
      */
-    public function show(Product $product, Sku $skus)
+    public function show(Product $product, Sku $sku)
     {
-        return view('auth.skus.show', compact('product', 'skus'));
+        return view('auth.skus.show', compact('product', 'sku'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  Product  $product
-     * @param  Sku  $skus
+     * @param  Sku  $sku
      * @return void
      */
-    public function edit(Product $product, Sku $skus)
+    public function edit(Product $product, Sku $sku)
     {
-        return view('auth.skus.form', compact('product', 'skus'));
+        return view('auth.skus.form', compact('product', 'sku'));
     }
 
     /**
@@ -79,15 +79,15 @@ class SkuController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  Product  $product
-     * @param  Sku  $skus
+     * @param  Sku  $sku
      * @return void
      */
-    public function update(Request $request, Product $product, Sku $skus)
+    public function update(Request $request, Product $product, Sku $sku)
     {
         $params = $request->all();
         $params['product_id'] = $request->product->id;
-        $skus->update($params);
-        $skus->propertyOptions()->sync($request->property_id);
+        $sku->update($params);
+        $sku->propertyOptions()->sync($request->property_id);
         return redirect()->route('skus.index', $product);
     }
 
@@ -95,13 +95,13 @@ class SkuController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  Product  $product
-     * @param  Sku  $skus
+     * @param  Sku  $sku
      * @return void
      * @throws \Exception
      */
-    public function destroy(Product $product, Sku $skus)
+    public function destroy(Product $product, Sku $sku)
     {
-        $skus->delete();
+        $sku->delete();
         return redirect()->route('skus.index', $product);
     }
 }
