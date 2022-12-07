@@ -11,6 +11,8 @@
 |
 My routes
 */
+Route::get('/storage/categories/{file}', 'StorageController@categories')->where(['file' => '.+']);
+Route::get('/storage/products/{file}', 'StorageController@products')->where(['file' => '.+']);
 
 Auth::routes([
     'reset' => false,
@@ -79,3 +81,5 @@ Route::middleware(['set_locale'])->group(function () {
     Route::get('/{category}', 'MainController@category')->name('category');
     Route::get('/{category}/{product}/{skus}', 'MainController@sku')->name('sku');
 });
+
+
