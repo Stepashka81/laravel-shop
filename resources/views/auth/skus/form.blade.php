@@ -14,7 +14,7 @@
             <h1>Добавить Sku</h1>
         @endisset
         <form method="POST" enctype="multipart/form-data"
-              @if($sku && $sku->id)
+              @if(!empty($sku) && $sku->id)
               action="{{ route('skus.update', ['product' => $product, 'sku' => $sku]) }}"
               @else
               action="{{ route('skus.store', $product) }}"

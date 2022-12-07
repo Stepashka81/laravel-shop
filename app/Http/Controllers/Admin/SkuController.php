@@ -31,6 +31,7 @@ class SkuController extends Controller
      */
     public function create(Product $product)
     {
+
         return view('auth.skus.form', compact('product'));
     }
 
