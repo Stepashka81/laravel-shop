@@ -26,7 +26,7 @@ class SkuRequest extends FormRequest
         return [
             'price' => 'required|numeric|min:1',
             'count' => 'required|numeric|min:0',
-            'product_id'=>'required|numeric|min:1'
+            'product_id'=>'nullable|numeric|min:1'
         ];
     }
 }

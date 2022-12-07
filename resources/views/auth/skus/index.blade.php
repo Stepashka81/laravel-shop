@@ -22,7 +22,12 @@
             @foreach($skus as $sku)
                 <tr>
                     <td>{{ $sku->id }}</td>
-                    <td>{{ $sku->propertyOptions->map->name->implode(', ') }}</td>
+                    <td>@if($sku->propertyOptions->count())
+                        {{ $sku->propertyOptions->map->name->implode(', ') }}
+                        @else
+                         main
+                        @endif
+                    </td>
                     <td>
                         <div class="btn-group" role="group">
                             <form action="{{ route('skus.destroy', [$product, $sku]) }}" method="POST">
